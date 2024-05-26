@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="apiimages">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <style>
+    .container {
+      width: 120%;
+      /* Set initial width to 100% */
+      max-width: 600px;
+      /* Maximum width for larger screens */
+      height: 120vh;
+      /* Full height of the viewport */
+      margin: 0 auto;
+      /* Center horizontally */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        max-width: 90%;
+        /* Adjust maximum width for smaller screens */
+      }
+    }
+
+    .centered-text {
+      margin-top: 5%;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>apiimages</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3598751307";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div id="animationContainer1"></div>
+    <p class="centered-text">Loading....</p>
+  </div>
+
+  <!-- Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.12/lottie.min.js"></script>
+  <script>
+    // Load JSON animation using Lottie
+    var animationContainer = document.getElementById('animationContainer1');
+    var animationData = {
+      container: animationContainer,
+      renderer: 'svg', // or 'canvas', choose based on your preference
+      loop: true,
+      autoplay: true,
+      path: 'LoadingDIY.json' // Replace with the path to your JSON animation file
+    };
+    var animation = bodymovin.loadAnimation(animationData);
+  </script>
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+          // appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
