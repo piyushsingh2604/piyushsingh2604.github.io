@@ -15,7 +15,6 @@
   <style>
     .container {
       width: 100%;
-      max-width: 600px;
       height: 100vh;
       margin: 0 auto;
       display: flex;
@@ -31,35 +30,30 @@
     }
 
     #animationContainer1 {
-      width: 50vw; /* Default size: 50% of the viewport width */
-      height: 50vh; /* Default size: 50% of the viewport height */
+      width: 80vw; /* Default size: 80% of the viewport width */
+      height: 80vw; /* Ensure the height matches the width */
+      aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
     }
 
     /* Media query for tablets */
     @media (max-width: 768px) {
-      .container {
-        max-width: 90%;
-      }
       .centered-text {
         font-size: 1.5em; /* Increase font size for smaller screens */
       }
       #animationContainer1 {
-        width: 60vw; /* Increase size of the animation */
-        height: 60vh; /* Maintain aspect ratio */
+        width: 90vw; /* Increase size of the animation */
+        height: 90vw; /* Ensure the height matches the width */
       }
     }
 
     /* Additional media query for mobile devices */
     @media (max-width: 480px) {
-      .container {
-        max-width: 95%;
-      }
       .centered-text {
         font-size: 2em; /* Further increase font size for very small screens */
       }
       #animationContainer1 {
-        width: 80vw; /* Further increase size of the animation */
-        height: 80vh; /* Maintain aspect ratio */
+        width: 95vw; /* Further increase size of the animation */
+        height: 95vw; /* Ensure the height matches the width */
       }
     }
   </style>
