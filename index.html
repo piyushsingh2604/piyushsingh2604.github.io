@@ -28,30 +28,51 @@
   <style>
     .container {
       width: 100%;
-      /* Set initial width to 100% */
       max-width: 600px;
-      /* Maximum width for larger screens */
       height: 100vh;
-      /* Full height of the viewport */
       margin: 0 auto;
-      /* Center horizontally */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
+    .centered-text {
+      margin-top: 5%;
+      text-align: center;
+      font-size: 1em; /* Default font size */
+    }
+
+    #animationContainer1 {
+      width: 100%;
+      max-width: 300px; /* Default size */
+      height: auto;
+    }
+
     /* Media query for smaller screens */
     @media (max-width: 768px) {
       .container {
         max-width: 90%;
-        /* Adjust maximum width for smaller screens */
+      }
+      .centered-text {
+        font-size: 1.5em; /* Increase font size for smaller screens */
+      }
+      #animationContainer1 {
+        max-width: 400px; /* Increase size of the animation */
       }
     }
 
-    .centered-text {
-      margin-top: 5%;
-      text-align: center;
+    /* Additional media query for even smaller screens */
+    @media (max-width: 480px) {
+      .container {
+        max-width: 95%;
+      }
+      .centered-text {
+        font-size: 2em; /* Further increase font size for very small screens */
+      }
+      #animationContainer1 {
+        max-width: 80vw; /* Scale animation to 80% of viewport width */
+      }
     }
   </style>
 
