@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -44,12 +31,11 @@
     }
 
     #animationContainer1 {
-      width: 100%;
-      max-width: 300px; /* Default size */
-      height: auto;
+      width: 50vw; /* Default size: 50% of the viewport width */
+      height: 50vh; /* Default size: 50% of the viewport height */
     }
 
-    /* Media query for smaller screens */
+    /* Media query for tablets */
     @media (max-width: 768px) {
       .container {
         max-width: 90%;
@@ -58,11 +44,12 @@
         font-size: 1.5em; /* Increase font size for smaller screens */
       }
       #animationContainer1 {
-        max-width: 400px; /* Increase size of the animation */
+        width: 60vw; /* Increase size of the animation */
+        height: 60vh; /* Maintain aspect ratio */
       }
     }
 
-    /* Additional media query for even smaller screens */
+    /* Additional media query for mobile devices */
     @media (max-width: 480px) {
       .container {
         max-width: 95%;
@@ -71,7 +58,8 @@
         font-size: 2em; /* Further increase font size for very small screens */
       }
       #animationContainer1 {
-        max-width: 80vw; /* Scale animation to 80% of viewport width */
+        width: 80vw; /* Further increase size of the animation */
+        height: 80vh; /* Maintain aspect ratio */
       }
     }
   </style>
@@ -83,7 +71,6 @@
   <link rel="manifest" href="manifest.json">
 
   <script>
-    // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
