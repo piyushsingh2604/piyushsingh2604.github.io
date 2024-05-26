@@ -42,7 +42,7 @@
     }
 
     /* Media query for smaller screens */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .container {
         max-width: 90%;
         /* Adjust maximum width for smaller screens */
@@ -70,6 +70,12 @@
 </head>
 <body>
   <div class="container">
+    <img 
+      id="responsiveImage" 
+      src="image-300.png" 
+      srcset="image-200.png 768w, image-300.png 769w" 
+      sizes="(max-width: 768px) 200px, 300px" 
+      alt="Responsive Image">
     <div id="animationContainer1"></div>
     <p class="centered-text">Loading....</p>
   </div>
@@ -98,7 +104,7 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
-          // appRunner.runApp();
+            appRunner.runApp();
           });
         }
       });
