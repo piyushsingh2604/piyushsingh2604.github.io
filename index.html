@@ -22,6 +22,8 @@
     }
 
     .container {
+      padding: 0; /* Remove any padding */
+      margin: 0; /* Remove any margin */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -31,35 +33,34 @@
     }
 
     .centered-text {
-      margin-top: 5%;
+      margin: 0; /* Remove margin to eliminate space between animation and text */
+      padding: 0; /* Remove padding */
       text-align: center;
-      font-size: 2em; /* Default font size */
+      font-size: 2em; /* Default font size for larger screens */
     }
 
     #animationContainer1 {
       width: 100%;
-      height: 100%;
+      height: 80%; /* Adjust to leave space for text */
     }
 
-    /* Media query for tablets */
+    /* Media query for tablets and small screens */
     @media (max-width: 768px) {
       .centered-text {
-        font-size: 2em; /* Increase font size for smaller screens */
+        font-size: 2.5em; /* Increase font size for better visibility on tablets and small screens */
       }
       #animationContainer1 {
-        width: 100%;
-        height: 80%;
+        height: 70%; /* Adjust to leave space for text */
       }
     }
 
-    /* Additional media query for mobile devices */
+    /* Additional media query for very small screens */
     @media (max-width: 480px) {
       .centered-text {
-        font-size: 3em; /* Further increase font size for very small screens */
+        font-size: 3em; /* Further increase font size for better visibility on very small screens */
       }
       #animationContainer1 {
-        width: 100%;
-        height: 90%;
+        height: 70%; /* Adjust to leave space for text */
       }
     }
   </style>
