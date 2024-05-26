@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+  <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -27,11 +27,11 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
   <style>
     .container {
-      width: 120%;
+      width: 100%;
       /* Set initial width to 100% */
       max-width: 600px;
       /* Maximum width for larger screens */
-      height: 120vh;
+      height: 100vh;
       /* Full height of the viewport */
       margin: 0 auto;
       /* Center horizontally */
@@ -63,7 +63,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3598751307";
+    const serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
