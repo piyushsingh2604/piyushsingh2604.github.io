@@ -1,0 +1,12 @@
+{
+    "name": "Piyush Singh - Portfolio",
+    "short_name": "Piyush Singh",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#070707",
+    "theme_color": "#070707",
+    "description": "Piyush Singh - Flutter Developer Portfolio",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": []
+}
